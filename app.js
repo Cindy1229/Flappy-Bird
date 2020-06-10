@@ -1,5 +1,6 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
+var score=0;
 
 //load images
 var bird = new Image();
@@ -34,6 +35,7 @@ document.addEventListener('keydown', moveUp);
 //Bird move function
 function moveUp() {
   bY-=25;
+  fly.play();
 }
 
 //pipe coordinates
@@ -86,9 +88,6 @@ function draw() {
   ctx.drawImage(bird, bX,bY);
   //Gravity
   bY+=gravity;
-
-
-
 
 
 
