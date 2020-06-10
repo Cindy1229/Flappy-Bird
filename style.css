@@ -1,0 +1,26 @@
+.container {
+  height: 700px;
+  widh: 500px;
+  background-color: #F0FFFF;
+}
+
+.current {
+  position: absolute;
+  padding-top: 15px;
+  padding-left: 210px;
+  font-size: 25px;
+  color: white;
+
+}
+
+.best {
+  position: absolute;
+  padding-top: 65px;
+  font-size: 20px;
+  padding-left: 210px;
+  color: white;
+}
+
+.cv {
+  text-align: center;
+}

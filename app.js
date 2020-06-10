@@ -1,6 +1,12 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 var score=0;
+var best=document.querySelector(".best");
+var current=document.querySelector(".current");
+var max=0;
+
+//Set best score local storage
+
 
 //load images
 var bird = new Image();
@@ -77,7 +83,15 @@ function draw() {
     if(pipe[i].x==5){
       score++;
       scor.play();
-      console.log(score);
+      console.log(score  );
+      if(score>max){
+        max=score;
+        console.log(max);
+        best.innerHTML=`Best Score: ${max}`;
+      }
+      current.innerHTML=`Current Score: ${score}`;
+      //console.log(score);
+
     }
   }
 
