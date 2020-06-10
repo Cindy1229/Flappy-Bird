@@ -5,7 +5,9 @@ var best=document.querySelector(".best");
 var current=document.querySelector(".current");
 var max=0;
 
-//Set best score local storage
+//Get best score local storage
+max=localStorage.getItem("BestScore");
+best.innerHTML=`Best Score: ${max}`;
 
 
 //load images
@@ -87,7 +89,8 @@ function draw() {
       if(score>max){
         max=score;
         console.log(max);
-        best.innerHTML=`Best Score: ${max}`;
+        localStorage.setItem('BestScore', max);
+        best.innerHTML=`Best Score: ${localStorage.getItem("BestScore")}`;
       }
       current.innerHTML=`Current Score: ${score}`;
       //console.log(score);
